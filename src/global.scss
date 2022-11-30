@@ -8,8 +8,25 @@ body {
   background-color: #fff;
   width: 50%;
   margin: 10% auto;
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 20px;
+
+  .add-item-input {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #20b2aa; 
+    margin-right: 20px;
+    height: 40px;
+    width: 200px;
+  }
+
+  .add-item-btn {
+    border-radius: 5px;
+    border: none;
+    background-color:  #20b2aa; 
+    height: 45px;
+    width: 100px;
+  }
 }
 
 

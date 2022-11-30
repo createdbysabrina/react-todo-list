@@ -8,10 +8,11 @@ export default function AddItem(props) {
             <input
                 type="text" 
                 placeholder=" Add a new item..."
+                className="add-item-input"
             >
             </input>
             
-            <button>
+            <button className="add-item-btn">
                 Add Item
             </button>
         </>
