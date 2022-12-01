@@ -1,4 +1,4 @@
-# React ToDo List Demo
+# My Super React ToDo List Demo
 
 I am working on this project with just React to showcase my skills with React, currently being worked on.
 This readme document will be updated as I complete this project.
