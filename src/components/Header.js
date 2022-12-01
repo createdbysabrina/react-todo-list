@@ -1,5 +1,5 @@
 export default function Header() {
     return (
-        <h1>My To Do List</h1>
+        <h1>My Super To Do List</h1>
     )
 }

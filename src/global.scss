@@ -20,17 +20,53 @@ body {
     border-style: solid;
     border-color: #20b2aa; 
     margin-right: 20px;
-    height: 40px;
+    height: 35px;
     width: 200px;
+    padding: 10px;
   }
 
   .add-item-btn {
     border-radius: 5px;
     border: none;
     background-color:  #20b2aa; 
-    height: 45px;
+    height: 40px;
     width: 100px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
   }
+}
+
+.todo-item {
+ list-style: none;
+ padding-left: 0;
+
+  button {
+    width: 95px;
+    height: 40px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+  }
+
+  .completed-btn {
+
+    background-color: #5D9DDE;
+
+  }
+
+  .deleted-btn {
+
+    background-color: #FA69C9;
+
+  }
+
+  .archive-btn {
+    background-color: #7A73F5;
+  }
+
+
 }
 
 

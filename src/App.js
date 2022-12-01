@@ -1,5 +1,5 @@
 import Header from './components/Header'
-import List from './components/List'
+import ToDoList from './components/List'
 import AddItem from './components/AddItem';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <List />
+      <ToDoList />
       <AddItem />
     </>
 
