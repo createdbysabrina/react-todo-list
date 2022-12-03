@@ -1,14 +1,16 @@
 import Header from './components/Header'
 import ToDoList from './components/List'
 import AddItem from './components/AddItem';
+import ButtonPanel from './components/ButtonPanel';
 
 function App() {
 
   return (
     <>
       <Header />
-      <ToDoList />
       <AddItem />
+      <ToDoList />
+      <ButtonPanel />
     </>
 
   )

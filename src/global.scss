@@ -15,12 +15,18 @@ body {
   border-radius: 10px;
   padding: 30px;
 
+  h1 {
+    margin: 0 0 20px;
+    text-align: center;
+  }
+
   .add-item-input {
     border-radius: 5px;
     border-style: solid;
-    border-color: #20b2aa; 
+    border-color: #20b2aa;
+    box-sizing: border-box;
     margin-right: 20px;
-    height: 35px;
+    height: 40px;
     width: 200px;
     padding: 10px;
   }
@@ -36,19 +42,27 @@ body {
   }
 }
 
-.todo-item {
- list-style: none;
- padding-left: 0;
+button {
+  width: 95px;
+  height: 40px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
 
-  button {
-    width: 95px;
-    height: 40px;
-    margin: 0 5px;
-    border: none;
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
+.list-section {
+
+  padding-inline-start: 0;
+
+  .todo-item {
+    list-style: none;
   }
+
+}
+
+.button-panel {
 
   .completed-btn {
 
@@ -66,8 +80,4 @@ body {
     background-color: #7A73F5;
   }
 
-
 }
-
-
-
