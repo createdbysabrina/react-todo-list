@@ -16,9 +16,6 @@ function App() {
   }
 
   const handleSubmit = () => {
-        
-    console.log(textValue, "whats in textValue")
-    console.log(toDoData , "what is toToData before the update")
     setToData([...toDoData, { task: textValue }])
   }
 
