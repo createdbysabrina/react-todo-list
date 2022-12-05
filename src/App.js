@@ -1,26 +1,26 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Header from './components/Header'
 import ToDoList from './components/ToDoList'
 import AddItem from './components/AddItem'
 import ButtonPanel from './components/ButtonPanel'
+import listData from './data/ListData'
 
 function App() {
 
-  let mockData = []
+  let textValue = ""
 
-    let textValue = "";
+  const [toDoData, setToData ] = useState(listData)
 
-    const handleChange = (e) => {
-       textValue = e.currentTarget.value
-    }
+  const handleChange = (e) => {
+    textValue = e.currentTarget.value
+  }
 
-    const handleSubmit = () => {
+  const handleSubmit = () => {
         
-       console.log(textValue, "whats in textValue")
-       console.log(mockData, "what is mockdata before the update")
-       mockData = [...mockData, { task: textValue }]
-       console.log(mockData, 'mockData')
-    }
+    console.log(textValue, "whats in textValue")
+    console.log(toDoData , "what is toToData before the update")
+    setToData([...toDoData, { task: textValue }])
+  }
 
   return (
     <>
@@ -29,7 +29,7 @@ function App() {
         addTask={handleChange} 
         submitTask={handleSubmit} 
       />
-      <ToDoList items={mockData}/>
+      <ToDoList items={toDoData}/>
       <ButtonPanel />
     </>
 
