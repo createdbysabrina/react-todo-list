@@ -36,6 +36,16 @@ body {
   }
 }
 
+.text-validation {
+  color: #fa6969;
+  font-size: 0.87em;
+}
+
+.add-item-checkbox {
+  width: 40px;
+
+}
+
 button {
   width: 95px;
   height: 40px;
@@ -44,6 +54,9 @@ button {
   border-radius: 5px;
   font-family: 'Poppins', sans-serif;
   color: #fff;
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
 .list-section {

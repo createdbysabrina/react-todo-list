@@ -10,12 +10,27 @@ function App() {
   let textValue = ""
 
   const [toDoData, setToData ] = useState(listData)
+  const [emptyText, setEmptyText ] = useState(false)
+  const [btnDisabled, setBtnDisabled ] = useState(true)
+  const [selectDeletedItems, setSelectDeletedItems ] = useState(false)
 
   const handleChange = (e) => {
     textValue = e.currentTarget.value
+    setBtnDisabled(false)
   }
 
   const handleSubmit = () => {
+    if (textValue === '') {
+      setEmptyText(true)
+      setBtnDisabled(true)
+      return
+    }
+    setToData([...toDoData, { task: textValue }])
+  }
+
+  const handleDeleted = (e) => {
+   
+    }
     setToData([...toDoData, { task: textValue }])
   }
 
@@ -24,7 +39,9 @@ function App() {
       <Header />
       <AddItem 
         addTask={handleChange} 
-        submitTask={handleSubmit} 
+        submitTask={handleSubmit}
+        textEmpty={emptyText}
+        isBtnDisabled={btnDisabled}
       />
       <ToDoList items={toDoData}/>
       <ButtonPanel />
