@@ -1,17 +1,17 @@
 
 import listData from "../data/ListData"
 
-import ToDo from "../components/ToDo"
+import ToDo from "./ToDo"
 
 export default function List() {
 
-    const items = listData.map(( item , index )=> <ToDo key={index} task={item} /> )
+    const toDos = listData.map(( item , index )=> <ToDo key={index} task={item.task} /> )
 
     return (
         
         <ul className="list-section">
 
-            { items }
+            { toDos }
             
         </ul>
 

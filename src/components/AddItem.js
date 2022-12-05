@@ -1,28 +1,23 @@
-import { useRef } from 'react';
-
 export default function AddItem(props) {
 
-    const inputRef = useRef(null)
-
-    const btnHandler = () => {
-        console.log(inputRef.current.value, "value from input")
-    }
+    const { addTask, submitTask } = props
+    
 
 
     return (
 
         <>
             <input
-                ref={inputRef}
+                className="add-item-input"
                 type="text" 
                 placeholder=" Add a new item..."
-                className="add-item-input"
+                onChange={addTask}
             >
             </input>
             
             <button 
                 className="add-item-btn"
-                onClick={btnHandler}
+                onClick={submitTask}
             >
                 Add Item
             </button>
