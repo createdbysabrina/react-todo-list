@@ -1,18 +1,17 @@
 import React, { useState } from 'react'
-import Header from './components/Header'
 import ToDoList from './components/ToDoList'
 import AddItem from './components/AddItem'
 import ButtonPanel from './components/ButtonPanel'
-import listData from './data/ListData'
 
 function App() {
+  let textValue = ''
 
-  let textValue = ""
-
-  const [toDoData, setToData ] = useState(listData)
-  const [emptyText, setEmptyText ] = useState(false)
-  const [btnDisabled, setBtnDisabled ] = useState(true)
-  const [selectDeletedItems, setSelectDeletedItems ] = useState(false)
+  const [toDoData, setToData] = useState([])
+  const [emptyText, setEmptyText] =
+    useState(false)
+  const [btnDisabled, setBtnDisabled] =
+    useState(true)
+  // const [selectDeletedItems, setSelectDeletedItems ] = useState(false)
 
   const handleChange = (e) => {
     textValue = e.currentTarget.value
@@ -25,30 +24,36 @@ function App() {
       setBtnDisabled(true)
       return
     }
+
     setToData([...toDoData, { task: textValue }])
   }
 
-  const handleDeleted = (e) => {
-   
-    }
-    setToData([...toDoData, { task: textValue }])
-  }
+  const noOfTasks = toDoData.length
+
+  // const handleDeleted = (e) => {
+  //   setToData([...toDoData, { task: textValue }])
+  // }
 
   return (
-    <>
-      <Header />
-      <AddItem 
-        addTask={handleChange} 
-        submitTask={handleSubmit}
-        textEmpty={emptyText}
-        isBtnDisabled={btnDisabled}
-      />
-      <ToDoList items={toDoData}/>
-      <ButtonPanel />
-    </>
-
+    <main className="home">
+      <section className="container column-layout">
+        <h1 className="task-announcment">
+          You have {noOfTasks} task to do today!
+        </h1>
+        <p className="task-date">
+          Saturday, October 21st 2023
+        </p>
+        <AddItem
+          addTask={handleChange}
+          submitTask={handleSubmit}
+          textEmpty={emptyText}
+          isBtnDisabled={btnDisabled}
+        />
+        <ButtonPanel />
+        <ToDoList items={toDoData} />
+      </section>
+    </main>
   )
-
 }
 
-export default App;
+export default App

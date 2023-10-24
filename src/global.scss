@@ -3,36 +3,89 @@
 
 body {
 
-  background-color: #000;
   font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  color: #373735;
 
 }
 
-.todo-container {
+.column-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
   background-color: #fff;
-  width: 50%;
-  margin: 10% auto;
+  width: 70%;
+  margin: 0 auto;
+  padding: 32px;
+  height: 100vh;
+
+  //temporary border
   border-radius: 10px;
-  padding: 30px;
+  border-style: solid;
+  border-width: .2px;
+  border-color: #dcdefd;
 
   h1 {
+    font-size: 1.2rem;
     margin: 0 0 20px;
     text-align: center;
+  }
+
+  .add-item-container {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 15px;
+
   }
 
   .add-item-input {
     border-radius: 5px;
     border-style: solid;
-    border-color: #20b2aa;
+    border-width: .5px;
+    border-color: #20b2aa;;
     box-sizing: border-box;
-    margin-right: 20px;
     height: 40px;
-    width: 200px;
+    width: 100%;
     padding: 10px;
   }
 
   .add-item-btn {
-    background-color:  #20b2aa; 
+    background-color:  #20b2aa;
+    width: 120px;
+  }
+}
+
+.home {
+
+  height: 100vh;
+  padding: 100px 50px;
+  background-color: #dcdefd;
+
+  .task-announcement {
+    margin-bottom: 0.5rem;
+  }
+
+  .task-date {
+    margin: 0 0 1rem;
+    font-size: 0.875rem;
+  }
+
+  .task-date-filters {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 30px 0;
+
+    button {
+      width: 150px;
+      border-radius: 12px;
+      background-color: #646fd3;
+    }
   }
 }
 
@@ -49,7 +102,7 @@ body {
 button {
   width: 95px;
   height: 40px;
-  margin: 0 5px;
+  // margin: 0 5px;
   border: none;
   border-radius: 5px;
   font-family: 'Poppins', sans-serif;
@@ -70,21 +123,27 @@ button {
 }
 
 .button-panel {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 
-  .completed-btn {
+
+  .complete-btn {
 
     background-color: #5D9DDE;
+    width: 33%;
 
   }
 
-  .deleted-btn {
+  .delete-btn {
 
     background-color: #FA69C9;
-
+    width: 33%;
   }
 
   .archive-btn {
     background-color: #7A73F5;
+    width: 33%;
   }
 
 }
